@@ -2,8 +2,10 @@
   "name": "express-node-sequelize",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "~1.13.2",
     "express": "~4.13.1",
+    "mysql": "^2.16.0",
     "sequelize": "^3.3.2",
     "validator": "^4.0.6"
   }

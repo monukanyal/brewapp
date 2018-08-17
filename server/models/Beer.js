@@ -1,21 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
-  var Inventory = sequelize.define('Inventory', {
+  var Beer = sequelize.define('Beer', {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
-    productID: {
-      type: DataTypes.INTEGER
+    name: {
+      type: DataTypes.STRING,
+      unique: true
     },
-    storeID: {
-      type: DataTypes.INTEGER
-    },
-    inventory: {
-      type: DataTypes.INTEGER
-    },
-    price: {
-      type: DataTypes.FLOAT
+    picture: {
+      type: DataTypes.STRING
     }
   }, {
     classMethods: {
@@ -26,5 +21,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return Inventory;
+  return Beer;
 };
